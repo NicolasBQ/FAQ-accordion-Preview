@@ -1,0 +1,30 @@
+@include for-laptop-up {
+    .main {
+        display: flex;
+        
+        &__illustrations {
+            width: 50%;
+
+            &-shadow {
+                background: url(../images/bg-pattern-desktop.svg) no-repeat;
+                background-position: left -450px top -200px;
+                min-height: 700px;
+                width: 100%;
+                margin: 0;
+            }
+
+            &-woman {
+                background: url(../images/illustration-woman-online-desktop.svg);
+                background-position: left 50% top 0;
+                height: 359px;
+                width: 472px;
+                bottom: 480%;
+                left: -20%;
+            }
+        }
+    
+        &__faq {
+            width: 50%;
+        }
+    }
+}

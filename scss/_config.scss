@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$select-text: hsl(238, 29%, 16%);
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+$questions-color: hsl(237, 12%, 33%);
+$answers-color: hsl(240, 6%, 50%);
+$dividers-color: hsl(240, 5%, 91%);
+$white: hsl(100, 100, 100);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin for-laptop-up {
+    @media screen and (min-width:62em) {
+        @content;
+    }
+}

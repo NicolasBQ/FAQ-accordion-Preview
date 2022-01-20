@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main__faq {
+  padding: 2rem;
+  text-align: center;
+}
+
+.main__faq-title {
+  font-size: 2rem;
+  color: #1d1e35;
+}
+
+.main__faq-list {
+  text-align: left;
+  list-style-type: none;
+  width: 100%;
+}
+
+.main__faq-list-component {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e7e7e9;
+  padding: 1rem 0;
+}
+
+.main__faq-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.main__illustrations {
+  height: 6.5rem;
+  width: 100%;
+}
+
+.main__illustrations-shadow {
+  background: url(../images/bg-pattern-mobile.svg) no-repeat;
+  height: 6.5rem;
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.main__illustrations-woman {
+  background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
+  height: 11.375rem;
+  width: 15rem;
+  margin: 0 auto;
+  position: relative;
+  left: 0;
+  bottom: 200%;
+}
+
+@media screen and (min-width: 62em) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main__illustrations {
+    width: 50%;
+  }
+  .main__illustrations-shadow {
+    background: url(../images/bg-pattern-desktop.svg) no-repeat;
+    background-position: left -450px top -200px;
+    min-height: 700px;
+    width: 100%;
+    margin: 0;
+  }
+  .main__illustrations-woman {
+    background: url(../images/illustration-woman-online-desktop.svg);
+    background-position: left 50% top 0;
+    height: 359px;
+    width: 472px;
+    bottom: 480%;
+    left: -20%;
+  }
+  .main__faq {
+    width: 50%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+  background: linear-gradient(45deg, #6565e7, #af67e9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.question {
+  color: #4a4b5e;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.answer {
+  color: #787887;
+  font-size: 0.9rem;
+  width: 90%;
+}
+
+.down-arrow {
+  cursor: pointer;
+}
+
+.main {
+  width: 90%;
+  max-width: 70rem;
+  background: white;
+  border-radius: 2rem;
+  margin-top: 10rem;
+}
+
+@media screen and (min-width: 62em) {
+  .main {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

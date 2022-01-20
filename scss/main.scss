@@ -1,0 +1,43 @@
+@import 'config';
+@import 'rightSection';
+@import 'leftSection';
+@import 'media';
+
+body {
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(45deg, $soft-blue, $soft-violet);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    color: $questions-color;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.answer {
+    color: $answers-color;
+    font-size: 0.9rem;
+    width: 90%;
+}
+
+.down-arrow {
+    cursor: pointer;
+}
+
+.main {
+    width: 90%;
+    max-width: 70rem;
+    background: $white;
+    border-radius: 2rem;
+    margin-top: 10rem;
+
+    @include for-laptop-up {
+        margin: 0;
+    }
+}
+

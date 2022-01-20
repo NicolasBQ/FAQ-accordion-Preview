@@ -1,0 +1,27 @@
+.main__faq {
+    padding: 2rem;
+    text-align: center;
+
+    &-title {
+        font-size: 2rem;
+        color: $select-text;
+    }
+
+    &-list {
+        text-align: left;  
+        list-style-type: none;
+        width: 100%;     
+        
+        &-component {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid $dividers-color;
+            padding: 1rem 0;
+        }
+        
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

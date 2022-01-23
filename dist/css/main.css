@@ -9,7 +9,7 @@
 }
 
 .main__faq {
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
@@ -21,6 +21,7 @@
 .main__faq-list {
   text-align: left;
   list-style-type: none;
+  cursor: pointer;
   width: 100%;
 }
 
@@ -30,6 +31,10 @@
   padding: 1rem 0;
 }
 
+.main__faq-list-component:hover h4 {
+  color: #f47c57;
+}
+
 .main__faq-list-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,57 +42,68 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 0.5rem;
+  pointer-events: none;
 }
 
 .main__illustrations {
-  height: 6.5rem;
+  height: 104px;
   width: 100%;
-}
-
-.main__illustrations-shadow {
-  background: url(../images/bg-pattern-mobile.svg) no-repeat;
-  height: 6.5rem;
-  width: 15rem;
-  margin: 0 auto;
+  background-image: url(../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main__illustrations-woman {
-  background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
-  height: 11.375rem;
-  width: 15rem;
-  margin: 0 auto;
+  height: 160px;
+  width: 100%;
+  background-image: url(../images/illustration-woman-online-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
-  left: 0;
-  bottom: 200%;
+  top: -90%;
 }
 
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 75em) {
+  body {
+    overflow: hidden;
+  }
   .main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .main__illustrations {
+    height: 600px;
     width: 50%;
-  }
-  .main__illustrations-shadow {
-    background: url(../images/bg-pattern-desktop.svg) no-repeat;
-    background-position: left -450px top -200px;
-    min-height: 700px;
-    width: 100%;
-    margin: 0;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position: right -20% top 70%;
   }
   .main__illustrations-woman {
-    background: url(../images/illustration-woman-online-desktop.svg);
-    background-position: left 50% top 0;
-    height: 359px;
-    width: 472px;
-    bottom: 480%;
-    left: -20%;
+    height: 600px;
+    width: 100%;
+    background-image: url(../images/illustration-woman-online-desktop.svg);
+    background-position: left -110% top 50%;
+    position: static;
+  }
+  .main__illustrations-box {
+    height: 184px;
+    width: 191px;
+    background-image: url(../images/illustration-box-desktop.svg);
+    position: relative;
+    bottom: 55%;
+    left: -18%;
   }
   .main__faq {
     width: 50%;
+    padding-top: 5rem;
+  }
+  .main__faq-title {
+    text-align: left;
+    margin-bottom: 1rem;
   }
 }
 
@@ -114,29 +130,79 @@ body {
   color: #4a4b5e;
   font-weight: 400;
   font-size: 1rem;
+  pointer-events: none;
+}
+
+.question__active {
+  font-weight: 700;
+  color: #1d1e35;
 }
 
 .answer {
   color: #787887;
   font-size: 0.9rem;
+  position: absolute;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.answer__active {
+  position: static;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
   width: 90%;
+  opacity: 1;
 }
 
 .down-arrow {
-  cursor: pointer;
+  display: block;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.down-arrow__rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .main {
   width: 90%;
-  max-width: 70rem;
+  max-width: 65rem;
   background: white;
   border-radius: 2rem;
   margin-top: 10rem;
 }
 
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 75em) {
   .main {
     margin: 0;
   }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 700;
+  color: #1d1e35;
+}
+
+.footer__text {
+  font-size: 1rem;
+}
+
+.footer__link {
+  color: inherit;
+}
+
+.footer__link:hover {
+  text-decoration: none;
+  color: #f47c57;
 }
 /*# sourceMappingURL=main.css.map */

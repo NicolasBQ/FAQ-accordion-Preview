@@ -1,21 +1,17 @@
 .main__illustrations {
-    height: 6.5rem;
+    height: 104px;
     width: 100%;
-    
-    &-shadow {
-        background: url(../images/bg-pattern-mobile.svg) no-repeat;
-        height: 6.5rem;
-        width: 15rem;
-        margin: 0 auto;
-    }
+    background-image: url(../images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 
     &-woman {
-        background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
-        height: 11.375rem;
-        width: 15rem;
-        margin: 0 auto;
+        height: 160px;
+        width: 100%;
+        background-image: url(../images/illustration-woman-online-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center;
         position: relative;
-        left: 0;
-        bottom: 200%;
+        top: -90%;
     }
 }

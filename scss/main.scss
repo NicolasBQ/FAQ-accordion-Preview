@@ -17,21 +17,44 @@ body {
     color: $questions-color;
     font-weight: 400;
     font-size: 1rem;
+    pointer-events: none;
+
+    &__active {
+        font-weight: 700;
+        color: $select-text;
+    }
 }
 
 .answer {
     color: $answers-color;
     font-size: 0.9rem;
-    width: 90%;
+    position: absolute;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out;
+    pointer-events: none;
+
+    &__active {
+        position: static;
+        transform: translateY(0px);
+        width: 90%;
+        opacity: 1;
+    }
 }
 
 .down-arrow {
-    cursor: pointer;
+    display: block;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+
+    &__rotate {
+        transform: rotate(180deg);
+    }
 }
 
 .main {
     width: 90%;
-    max-width: 70rem;
+    max-width: 65rem;
     background: $white;
     border-radius: 2rem;
     margin-top: 10rem;
@@ -41,3 +64,21 @@ body {
     }
 }
 
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 700;
+    color: $select-text;
+    &__text {
+        font-size: 1rem;
+    }
+
+    &__link {
+        color: inherit;
+    }
+
+    &__link:hover {
+        text-decoration: none;
+        color: $hover-color;
+    }
+}

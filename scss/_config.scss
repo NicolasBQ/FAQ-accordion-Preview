@@ -6,6 +6,7 @@ $soft-blue: hsl(240, 73%, 65%);
 $questions-color: hsl(237, 12%, 33%);
 $answers-color: hsl(240, 6%, 50%);
 $dividers-color: hsl(240, 5%, 91%);
+$hover-color: hsl(14, 88%, 65%);
 $white: hsl(100, 100, 100);
 
 *,
@@ -17,7 +18,7 @@ $white: hsl(100, 100, 100);
 }
 
 @mixin for-laptop-up {
-    @media screen and (min-width:62em) {
+    @media screen and (min-width:75em) {
         @content;
     }
 }

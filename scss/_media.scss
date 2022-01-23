@@ -1,30 +1,43 @@
 @include for-laptop-up {
-    .main {
-        display: flex;
-        
-        &__illustrations {
-            width: 50%;
+    body {
+        overflow: hidden;
+    }
 
-            &-shadow {
-                background: url(../images/bg-pattern-desktop.svg) no-repeat;
-                background-position: left -450px top -200px;
-                min-height: 700px;
-                width: 100%;
-                margin: 0;
-            }
+    .main {
+        display: flex;  
+
+        &__illustrations {
+            height: 600px;
+            width: 50%;
+            background-image: url(../images/bg-pattern-desktop.svg);
+            background-position: right -20% top 70%;
 
             &-woman {
-                background: url(../images/illustration-woman-online-desktop.svg);
-                background-position: left 50% top 0;
-                height: 359px;
-                width: 472px;
-                bottom: 480%;
-                left: -20%;
+                height: 600px;
+                width: 100%;
+                background-image: url(../images/illustration-woman-online-desktop.svg);
+                background-position: left -110% top 50%;
+                position: static;
+            }
+
+            &-box {
+                height: 184px;
+                width: 191px;
+                background-image: url(../images/illustration-box-desktop.svg);
+                position: relative;
+                bottom: 55%;
+                left: -18%;
             }
         }
     
         &__faq {
             width: 50%;
+            padding-top: 5rem;
+
+            &-title {
+                text-align: left;
+                margin-bottom: 1rem;
+            }
         }
     }
 }
